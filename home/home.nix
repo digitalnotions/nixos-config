@@ -29,8 +29,8 @@
 
   # Ensure that we use emacsclient as appropriate
   home.sessionVariables = {
-    EDITOR = "${pkgs.emacs}/bin/emacsclient -t";
-    VISUAL = "${pkgs.emacs}/bin/emacsclient -c";
+    EDITOR = "${pkgs.emacs-git}/bin/emacsclient -t";
+    VISUAL = "${pkgs.emacs-git}/bin/emacsclient -c";
   };
 
   # Configure zsh for shell
@@ -42,7 +42,7 @@
 
     shellAliases = {
       ll = "ls -al";
-      ec = "${pkgs.emacs}/bin/emacsclient -n -c";
+      ec = "${pkgs.emacs-git}/bin/emacsclient -n -c";
       nixos_update = "pushd ~/nixconfig && sudo nix flake update && sudo nix flake lock && popd";
       nixos_upgrade = "pushd ~/nixconfig && nixos-rebuild --use-remote-sudo switch --verbose --flake .# && popd && nixos_diff";
       nixos_diff = "nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)";
