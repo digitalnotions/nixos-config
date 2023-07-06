@@ -8,6 +8,7 @@
     powertop
     unzip
     gzip
+    ispell
     # Need ffmpeg-full for decoding H.264 in Firefox
     #ffmpeg_6-full
     killall
@@ -19,7 +20,7 @@
 
   services.emacs = {
     enable = true;
-    package = pkgs.emacs;
+    package = pkgs.emacs-git;
   };
 
 }

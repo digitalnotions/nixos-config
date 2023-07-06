@@ -9,6 +9,7 @@ with lib;
     thefuck
     partition-manager
     (python3.withPackages(ps: with ps; [ requests flake8 ]))
+    obsidian
 
     # Windows Virtual machine
     qemu
