@@ -62,4 +62,39 @@ in
       }
     ];
   };
+  #
+  # Nano
+  #
+  nano = lib.nixosSystem {
+    inherit system;
+    # Configure NixOS
+    specialArgs = {
+      inherit inputs pkgs system user location;
+      host = {
+        hostName = "nano";
+      };
+    };
+    modules = [
+      ./nano
+      ./configuration.nix
+
+      # Configure home manager
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+          inherit pkgs user emacs;
+          host = {
+            hostName = "nano";
+          };
+        };
+        home-manager.users.${user} = {
+          imports = [
+            ./home.nix
+          ];
+        };
+      }
+    ];
+  };
+
 }
