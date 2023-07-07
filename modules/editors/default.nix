@@ -1,0 +1,7 @@
+#
+# Define editors
+#
+
+[
+  ./emacs
+]

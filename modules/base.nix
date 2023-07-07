@@ -4,15 +4,15 @@ with lib;
 {
 
   nix = {
-   extraOptions = "experimental-features = nix-command flakes";
-   gc = {
-     automatic = true;
-     dates = "weekly";
-     options = "--delete-older-than 20d";
-   };
-   settings = {
-     auto-optimise-store = true;
-   };
+    extraOptions = "experimental-features = nix-command flakes";
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 20d";
+    };
+    settings = {
+      auto-optimise-store = true;
+    };
   };
   nixpkgs.config.allowUnFree = true;
 
