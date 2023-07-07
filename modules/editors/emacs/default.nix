@@ -17,8 +17,11 @@
 
   home = {
     sessionVariables = {
-      EDITOR = "${pkgs.emacs-git}/bin/emacsclient -t";
-      VISUAL = "${pkgs.emacs-git}/bin/emacsclient -c";
+#      EDITOR = "${pkgs.emacs-git}/bin/emacsclient -t";
+#      VISUAL = "${pkgs.emacs-git}/bin/emacsclient -c";
+      EDITOR = "emacsclient -t";
+      VISUAL = "emacsclient -c";
+
     };
     # TODO: MOVE EMACS CONFIG TO SEPARATE GIT REPO
     file.".emacs.d" = {

@@ -41,7 +41,6 @@
 
   programs = {
     home-manager.enable = true;
-    alacritty.settings.font.size = 11;
   };
 
   services = {

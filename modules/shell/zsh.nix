@@ -20,7 +20,10 @@
         grep = "grep --color=auto";
       };
 
-      initExtra = "eval $(thefuck --alias)";
+      initExtra = ''
+         eval $(thefuck --alias)
+         neofetch
+      '';
 
       oh-my-zsh = {
         enable = true;

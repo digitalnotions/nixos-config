@@ -14,18 +14,17 @@
       enable = true;
       layout = "us";
       xkbVariant = "";
-      displayManager = {
-        sddm.enable = true;
-      };
-      desktopManager = {
-        plasma5 = {
-          enable = true;
-          excludePackages = with pkgs.libsForQt5; [
-            khelpcenter
-            konsole
-          ];
-        };
-      };
+      displayManager.sddm.enable = true;
+      desktopManager.plasma5.enable = true;
+    };
+  };
+
+  environment = {
+    plasma5 = {
+      excludePackages = with pkgs.libsForQt5; [
+        khelpcenter
+        konsole
+      ];
     };
   };
 }

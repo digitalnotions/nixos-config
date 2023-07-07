@@ -6,8 +6,8 @@
 
 {
   imports =
-#    (import ../modules/editors) ++
-    (import ../modules/virtualization);
+    [../modules/cachix] ++
+    (import ../modules/desktop/virtualization);
 
   users.users.${user} = {
     isNormalUser = true;
@@ -57,8 +57,8 @@
   environment = {
     localBinInPath = true;
     variables = {
-      EDITOR = "emacsclient -t -a";
-      VISUAL = "emacsclient -c -a";
+      EDITOR = "emacsclient -t";
+      VISUAL = "emacsclient -c";
     };
     systemPackages = with pkgs; [
       killall
@@ -90,6 +90,14 @@
       };
       pulse.enable = true;
     };
+    syncthing = {
+      enable = true;
+      dataDir = "/home/${user}/";
+      user = "${user}";
+      openDefaultPorts = true;
+      configDir = "/home/${user}/.config/syncthing";
+    };
+
   };
 
   hardware.bluetooth = {
