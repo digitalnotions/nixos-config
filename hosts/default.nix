@@ -65,7 +65,7 @@ in
   #
   # Nano
   #
-  tinky = lib.nixosSystem {
+  nano = lib.nixosSystem {
     inherit system;
     # Configure NixOS
     specialArgs = {

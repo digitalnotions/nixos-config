@@ -17,8 +17,8 @@
         "/crypto_keyfile.bin" = null;
       };
       luks = {
-#        devices."luks-dda54615-0966-4d27-9a86-6641200f2b63".device = "/dev/disk/by-uuid/dda54615-0966-4d27-9a86-6641200f2b63";
-#        devices."luks-dda54615-0966-4d27-9a86-6641200f2b63".keyFile = "/crypto_keyfile.bin";
+         devices."luks-a39a06fa-fe6a-459b-8aaf-9c0e3cf77a3c".device = "/dev/disk/by-uuid/a39a06fa-fe6a-459b-8aaf-9c0e3cf77a3c";
+         devices."luks-a39a06fa-fe6a-459b-8aaf-9c0e3cf77a3c".keyFile = "/crypto_keyfile.bin";
       };
     };
     loader = {
