@@ -26,7 +26,7 @@ You'll also need to ensure that the everything is correct in the `nixconfig/host
 Once you're ready to go, build the flake (targeting `nano` in this example):
 
 ```
-nixos-rebuild switch --flake .#nano
+sudo nixos-rebuild switch --flake .#nano
 ```
 
 __Important note: If you're using a Git repo, you must commit changes to your files or else new files won't be picked up by the nixos-rebuild process.__
