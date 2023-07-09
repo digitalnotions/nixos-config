@@ -30,3 +30,10 @@ sudo nixos-rebuild switch --flake .#nano
 ```
 
 __Important note: If you're using a Git repo, you must commit changes to your files or else new files won't be picked up by the nixos-rebuild process.__
+
+## Resources
+
+Here are some resources that are particularly helpful:
+
+* [List of `nixpkgs` options](http://nmikhailov.github.io/nixpkgs/ch-options.html)
+* [List of `home-manager` options](https://rycee.gitlab.io/home-manager/options.html)

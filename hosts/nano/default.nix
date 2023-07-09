@@ -7,6 +7,7 @@
 {
   imports =
     [(import ./hardware-configuration.nix)] ++
+    [(import ../../modules/hardware/fingerprint.nix)] ++
     [(import ../../modules/desktop/kde/default.nix)];
 
 

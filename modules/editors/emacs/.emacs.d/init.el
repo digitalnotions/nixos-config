@@ -155,8 +155,8 @@
   :init
   (doom-modeline-mode 1)
   (custom-set-faces
-   '(mode-line ((t (:family "Fira Mono" :height 0.8))))
-   '(mode-line-inactive ((t (:family "Fira Mono" :height 0.8)))))
+   '(mode-line ((t (:family "FiraMono Nerd Font" :height 0.8))))
+   '(mode-line-inactive ((t (:family "FiraMono Nerd Font" :height 0.8)))))
   :custom
   (doom-modeline-height 1)
 )
@@ -175,11 +175,11 @@
 (if (eq system-type 'darwin)
     ;; Configure MacOS Font
     (set-face-attribute 'default nil
-			:font "Fira Mono"
+			:font "FiraMono Nerd Font"
 			:height 170)
   ;; Configure otherwise
   (set-face-attribute 'default nil
-		      :font "Fira Mono:antialias=subpixel"
+		      :font "FiraMono Nerd Font:antialias=subpixel"
 		      :height 150))
 
 ;; (load-theme 'wombat)
@@ -325,7 +325,7 @@
     :custom
     (org-superstar-remove-leading-stars t)
     (org-superstar-headline-hullets-list '("◉" "○" "●" "○" "●" "○" "●")))
-  (set-face-attribute 'org-document-title nil :font "Fira Mono" :weight 'bold :height 1.3)
+  (set-face-attribute 'org-document-title nil :font "FiraMono Nerd Font" :weight 'bold :height 1.3)
   (dolist (face '((org-level-1 . 1.2)
 		  (org-level-2 . 1.1)
 		  (org-level-3 . 1.05)
@@ -334,7 +334,7 @@
 		  (org-level-6 . 1.1)
 		  (org-level-7 . 1.1)
 		  (org-level-8 . 1.1)))
-  (set-face-attribute (car face) nil :font "Fira Mono" :weight 'medium :height (cdr face)))
+  (set-face-attribute (car face) nil :font "FiraMono Nerd Font" :weight 'medium :height (cdr face)))
   ;;(require 'org-indent)
   (set-face-underline 'org-ellipsis nil)
   ;; This ends the use-package org-mode block

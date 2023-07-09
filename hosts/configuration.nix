@@ -66,12 +66,16 @@
       nano
       neofetch
       nvd
+      pciutils
+      usbutils
+      obsidian
     ];
   };
 
   # System wide services
   services = {
-    blueman.enable = true;
+    # Don't need this as it's a secondary Bluetooth manager
+    # blueman.enable = true;
     printing = {
       enable = true;
     };
