@@ -35,5 +35,6 @@ __Important note: If you're using a Git repo, you must commit changes to your fi
 
 Here are some resources that are particularly helpful:
 
+* [NixOS Wiki](https://nixos.wiki/)
 * [List of `nixpkgs` options](http://nmikhailov.github.io/nixpkgs/ch-options.html)
 * [List of `home-manager` options](https://rycee.gitlab.io/home-manager/options.html)
