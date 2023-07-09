@@ -7,7 +7,7 @@
     git = {
       enable = true;
       userName = "Mark Wood";
-      userEmail = "mark@digitalnotions.net";
+      userEmail = "mark@markandkc.net";
     };
   };
 }

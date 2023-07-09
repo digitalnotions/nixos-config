@@ -1,5 +1,7 @@
 # Digital Notions NixOS Config
 
+_I am by no means an expert. These config files work for my use case, but may not be correct or functional for anyone else. Also, I assume certain level of Linux abilities as I don't really explain everything in detail. Hopefully you find them helpful!_
+
 ## Installation on a new machine
 
 Use whatever install media you like to get a new NixOS installation. I have found the graphical installer is fine as it allows me to LUKS encrypt my drive and partition however I want. It also allows me to install just about any desktop (or none at all). It doesn't really matter since once you pull down the configuration files, you end up re-creating whatever system you've defined.
