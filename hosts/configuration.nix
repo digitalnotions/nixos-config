@@ -68,7 +68,9 @@
       nvd
       pciutils
       usbutils
-      obsidian
+      powertop
+      htop
+      gcc
     ];
   };
 
