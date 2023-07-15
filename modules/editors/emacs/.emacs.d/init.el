@@ -56,6 +56,9 @@
 (set-fringe-mode 10)   ; Give some breathing room
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; Clarify that we don't want to be spammed by warnings
+(setq warning-minimum-level :error)
+
 ;; Fix some weird keyboard stuff or MacOS
 (when (eq system-type 'darwin)
   (global-set-key [home] 'move-beginning-of-line)
