@@ -264,22 +264,25 @@
 
 (use-package org-roam
   :init
-  (setq org-roam-v2-ack t)
-  (when (eq system-type 'windows-nt)
-    (setq org-roam-graph-executable "C:/Program Files/Graphviz/bin/dot.exe"))
+  ;; (setq org-roam-v2-ack t)
+  ;; (when (eq system-type 'windows-nt)
+  ;;   (setq org-roam-graph-executable "C:/Program Files/Graphviz/bin/dot.exe"))
   :custom
   (org-roam-directory (expand-file-name "org_roam" mw/basedir))
   :bind (("C-c n l" . org-roam-buffer-toggle)
 	 ("C-c n f" . org-roam-node-find)
 	 ("C-c n i" . org-roam-node-insert))
   :config
-  (org-roam-setup))
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; (org-roam-setup)
+  )
 
 (defun mw/org-mode-setup ()
   (org-indent-mode)
   ;;  (variable-pitch-mode 1)
   ;;  (auto-fill-mode 0)
-  (linum-mode -1)
+  ;; (linum-mode -1)
   (visual-line-mode 1)
   (diminish org-indent-mode)
   (abbrev-mode 1))

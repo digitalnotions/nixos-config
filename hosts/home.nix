@@ -26,6 +26,7 @@
       ispell
       firefox
       obsidian
+      tetex
 
       # Terminal
       kitty
