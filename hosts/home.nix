@@ -26,6 +26,7 @@
       ispell
       firefox
       obsidian
+      pandoc
       tetex
 
       # Terminal

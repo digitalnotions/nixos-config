@@ -28,6 +28,7 @@
 
       initExtra = ''
          eval $(thefuck --alias)
+         unsetopt autopushd
          neofetch
       '';
 

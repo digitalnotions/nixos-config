@@ -9,7 +9,7 @@
     enable = true;
     package = pkgs.emacs-git;
   };
-
+  
   programs.emacs = {
     enable = true;
     package = pkgs.emacs-git;
@@ -19,7 +19,6 @@
     sessionVariables = {
       EDITOR = "emacsclient -t";
       VISUAL = "emacsclient -c";
-
     };
   };
 
