@@ -43,10 +43,23 @@
 
   programs = {
     home-manager.enable = true;
+    gpg = {
+      enable = true;
+      mutableKeys = true;
+      mutableTrust = true;
+    };
   };
 
   services = {
     # blueman-applet.enable = true;
     network-manager-applet.enable = true;
+    gpg-agent = {
+      enable = true;
+      pinentryFlavor = "qt";
+      extraConfig = ''
+        allow-emacs-pinentry
+        allow-loobpack-pinentry
+     ''; 
+    };
   };
 }
