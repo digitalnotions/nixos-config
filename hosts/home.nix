@@ -21,6 +21,7 @@
       gzip
       unrar
       zip
+      discord
 
       # Applications
       ispell
@@ -56,10 +57,14 @@
     gpg-agent = {
       enable = true;
       pinentryFlavor = "qt";
+#      extraConfig = ''
+#        allow-emacs-pinentry
+#        allow-loobpack-pinentry
+      #     '';
       extraConfig = ''
         allow-emacs-pinentry
-        allow-loobpack-pinentry
-     ''; 
+     '';                        
+
     };
   };
 }
