@@ -8,7 +8,8 @@
   # Home manager modules
   imports =
     (import ../modules/editors) ++
-    (import ../modules/shell);
+    (import ../modules/shell) ++
+    [(import ../modules/security/default.nix)];
 
   home = {
     username = "mwood";
@@ -21,6 +22,7 @@
       gzip
       unrar
       zip
+      p7zip
       discord
 
       # Applications
@@ -36,7 +38,13 @@
       thefuck
 
       # Programming
-      (python3.withPackages(ps: with ps; [ requests flake8 ]))
+      (python3.withPackages(ps: with ps;
+        [
+          requests
+          flake8
+          psycopg2
+          scapy
+        ]))
     ];
 
     stateVersion = "23.05";
@@ -48,6 +56,10 @@
       enable = true;
       mutableKeys = true;
       mutableTrust = true;
+    };
+    nix-index = {
+      enable = true;
+      enableZshIntegration = true;
     };
   };
 

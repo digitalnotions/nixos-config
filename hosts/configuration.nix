@@ -71,7 +71,6 @@
       powertop
       htop
       gcc
-      
     ];
   };
 
