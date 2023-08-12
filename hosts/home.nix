@@ -42,8 +42,6 @@
         [
           requests
           flake8
-          psycopg2
-          scapy
         ]))
     ];
 

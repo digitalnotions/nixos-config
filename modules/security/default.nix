@@ -14,6 +14,14 @@
       wifite2
       iw
       macchanger
+
+      # Need Python2 for pyrit
+      # (python2.withPackages(ps: with ps;
+      #   [
+      #     psycopg2
+      #     scapy
+      #     parso-0.7.1
+      #   ]))
     ];
   };
 }

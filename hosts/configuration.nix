@@ -128,7 +128,15 @@
 #   package = pkgs.nixVersions.unstable;
     registry.nixpkgs.flake = inputs.nixpkgs;
   };
-  nixpkgs.config.allowUnFree = true;
+  
+  nixpkgs = {
+    config = {
+      allowUnFree = true;
+      permittedInsecurePackages = [
+        "python-2.7.18.6-env"
+      ];
+    };
+  };
 
   system.stateVersion = "23.05";
 }
