@@ -1,5 +1,5 @@
 #
-# Personal Emacs configuration
+# Security Applications
 #
 
 { config, pkgs, lib, ... }:
