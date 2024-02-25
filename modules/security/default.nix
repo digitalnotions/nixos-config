@@ -14,6 +14,7 @@
       wifite2
       iw
       macchanger
+      reaverwps-t6x
 
       # Need Python2 for pyrit
       # (python2.withPackages(ps: with ps;

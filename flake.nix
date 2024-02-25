@@ -23,11 +23,11 @@
 
   inputs =
     {
-      nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";             # Default to Stable Nix packages
+      nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";             # Default to Stable Nix packages
       nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; # Unstable Nix packages
 
       home-manager = {                                              # Home package manager
-        url = "github:nix-community/home-manager/release-23.05";
+        url = "github:nix-community/home-manager/release-23.11";
         inputs.nixpkgs.follows = "nixpkgs";
       };
 
