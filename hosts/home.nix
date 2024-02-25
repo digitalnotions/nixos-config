@@ -15,7 +15,7 @@
     username = "mwood";
     homeDirectory = "/home/${user}";
 
-    packages = with pkgs; [
+    packages = with unstable; [
       # File management
       rsync
       unzip
