@@ -69,7 +69,7 @@ in
     inherit system;
     # Configure NixOS
     specialArgs = {
-      inherit inputs pkgs system user location;
+      inherit inputs pkgs unstable system user location;
       host = {
         hostName = "nano";
       };
