@@ -28,7 +28,7 @@
       # Applications
       ispell
       firefox
-      obsidian
+      #obsidian
       pandoc
       tetex
 
