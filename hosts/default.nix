@@ -69,7 +69,7 @@ in
     inherit system;
     # Configure NixOS
     specialArgs = {
-      inherit inputs pkgs unstable system user location;
+      inherit inputs pkgs system user location;
       host = {
         hostName = "nano";
       };
@@ -83,7 +83,7 @@ in
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit pkgs user emacs;
+          inherit pkgs unstable user emacs;
           host = {
             hostName = "nano";
           };

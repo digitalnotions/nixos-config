@@ -41,7 +41,7 @@
   };
 
   # Define system wide fonts
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     carlito
     noto-fonts
     noto-fonts-cjk

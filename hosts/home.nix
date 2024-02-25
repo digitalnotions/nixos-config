@@ -34,7 +34,7 @@
 
       # Terminal
       kitty
-      alacritty
+      # alacritty
       thefuck
 
       # Programming
