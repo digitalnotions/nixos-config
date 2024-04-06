@@ -31,7 +31,8 @@
       obsidian
       pandoc
       tetex
-
+      rpi-imager
+      
       # Terminal
       kitty
       # alacritty
@@ -43,6 +44,9 @@
           requests
           flake8
         ]))
+
+      # Open GL
+      glxinfo
     ];
 
     stateVersion = "23.11";
