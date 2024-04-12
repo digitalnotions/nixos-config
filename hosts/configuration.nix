@@ -72,6 +72,7 @@
       htop
       gcc
       dig
+      lsscsi
     ];
   };
 
