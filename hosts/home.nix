@@ -42,6 +42,7 @@
       (python3.withPackages(ps: with ps;
         [
           requests
+          beautifulsoup4
           flake8
         ]))
 
