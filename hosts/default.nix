@@ -43,20 +43,21 @@ in
     };
     modules = [
       ./tinky
-      ./configuration.nix
+      ../system/configuration.nix
+      ../system/mwood.nix
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit pkgs user emacs;
+          inherit pkgs emacs;
           host = {
             hostName = "tinky";
           };
         };
-        home-manager.users.${user} = {
+        home-manager.users.mwood = {
           imports = [
-            ./home.nix
+            ../users/mwood.nix
           ];
         };
       }
@@ -76,21 +77,57 @@ in
     };
     modules = [
       ./nano
-      ./configuration.nix
+      ../system/configuration.nix
+      ../system/mwood.nix
 
       # Configure home manager
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
-          inherit pkgs unstable user emacs;
+          inherit pkgs unstable emacs;
           host = {
             hostName = "nano";
           };
         };
-        home-manager.users.${user} = {
+        home-manager.users.mwood = {
           imports = [
-            ./home.nix
+            ../users/mwood.nix
+          ];
+        };
+      }
+    ];
+  };
+  #
+  # Nano3
+  #
+  nano3 = lib.nixosSystem {
+    inherit system;
+    # Configure NixOS
+    specialArgs = {
+      inherit inputs pkgs system location;
+      host = {
+        hostName = "nano3";
+      };
+    };
+    modules = [
+      ./nano3
+      ../system/configuration.nix
+      ../system/mwood.nix
+
+      # Configure home manager
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+          inherit pkgs unstable emacs;
+          host = {
+            hostName = "nano3";
+          };
+        };
+        home-manager.users.mwood = {
+          imports = [
+            ../users/mwood.nix
           ];
         };
       }

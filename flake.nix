@@ -14,6 +14,9 @@
 #    that cannot run under Linux (mainly Ham radio software and Victron
 #    charge controllers).
 #
+#  - Laptop/Elyptic: Lenovo ThinkPad Carbon Nano Gen 3 - another super small
+#    to go everywhere with me. This will be mine and mine alone.
+#
 # This top level flake high level versions packages to ensure all
 # configurations are equivalent.
 #

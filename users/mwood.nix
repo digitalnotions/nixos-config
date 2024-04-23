@@ -2,8 +2,11 @@
 # General Home-manager configuration
 #
 
-{ config, lib, pkgs, unstable, user, ... }:
+{ config, lib, pkgs, unstable, ... }:
 
+let
+  user = "mwood";
+in
 {
   # Home manager modules
   imports =
@@ -12,7 +15,7 @@
     [(import ../modules/security/default.nix)];
 
   home = {
-    username = "mwood";
+    username = "${user}";
     homeDirectory = "/home/${user}";
 
     packages = with unstable; [
@@ -27,7 +30,6 @@
 
       # Applications
       ispell
-      firefox
       obsidian
       pandoc
       tetex
@@ -63,6 +65,16 @@
     nix-index = {
       enable = true;
       enableZshIntegration = true;
+    };
+    firefox = {
+      enable = true;
+      policies = {
+        DisableTelemetry = true;
+        DisableFirefoxStudies = true;
+        DontCheckDefaultBrowser = true;
+        DisablePocket = true;
+        SearchBar = "unified";
+      };
     };
   };
 

@@ -2,19 +2,12 @@
 # Main system configuration (for all NixOS systems)
 #
 
-{ config, lib, pkgs, inputs, user, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
     [../modules/cachix] ++
     (import ../modules/desktop/virtualization);
-
-  users.users.${user} = {
-    isNormalUser = true;
-    description = "Mark Wood";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    shell = pkgs.zsh;
-  };
 
   # Enable ZSH system wide
   programs = {
@@ -98,14 +91,6 @@
       };
       pulse.enable = true;
     };
-    syncthing = {
-      enable = true;
-      dataDir = "/home/${user}/";
-      user = "${user}";
-      openDefaultPorts = true;
-      configDir = "/home/${user}/.config/syncthing";
-    };
-
   };
 
   hardware.bluetooth = {
