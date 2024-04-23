@@ -2,14 +2,18 @@
 # Configuration specific to Tinky - Lenovo x270 Laptop
 #
 
-{ config, pkgs, user, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
     [(import ./hardware-configuration.nix)] ++
     [(import ../../modules/desktop/kde/default.nix)];
 
-
+  networking = {
+    hostName = "tinky";
+    networkmanager.enable = true;
+  };
+  
   boot = {
     initrd = {
       # Setup keyfile

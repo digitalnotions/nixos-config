@@ -2,7 +2,7 @@
 # Configuration specific to Tinky - Lenovo x270 Laptop
 #
 
-{ config, pkgs, user, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -11,6 +11,11 @@
     [(import ../../modules/desktop/kde/default.nix)] ++
     [(import ../../modules/desktop/video/default.nix)];
 
+
+  networking = {
+    hostName = "nano";
+    networkmanager.enable = true;
+  };
 
   boot = {
     initrd = {
