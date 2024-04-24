@@ -12,7 +12,7 @@ in
     isNormalUser = true;
     description = "Mark Wood";
     home = "/home/${user}";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     shell = pkgs.zsh;
   };
 

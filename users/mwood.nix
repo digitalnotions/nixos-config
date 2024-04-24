@@ -10,9 +10,9 @@ in
 {
   # Home manager modules
   imports =
-    (import ../modules/editors) ++
-    (import ../modules/shell) ++
-    [(import ../modules/security/default.nix)];
+    (import ./modules/editors) ++
+    (import ./modules/shell) ++
+    [(import ./modules/security/default.nix)];
 
   home = {
     username = "${user}";
