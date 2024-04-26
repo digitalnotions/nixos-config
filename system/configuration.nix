@@ -6,8 +6,8 @@
 
 {
   imports =
-    [../modules/cachix] ++
-    (import ../modules/desktop/virtualization);
+    [./modules/cachix];# ++
+#    (import ../modules/desktop/virtualization);
 
   # Enable ZSH system wide
   programs = {
@@ -55,7 +55,7 @@
     };
     systemPackages = with pkgs; [
       killall
-      cachix
+  #    cachix
       nano
       neofetch
       nvd
@@ -103,27 +103,17 @@
   };
 
   nix = {
-    extraOptions = "experimental-features = nix-command flakes";
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 20d";
+      options = "--delete-older-than 7d";
     };
     settings = {
       auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];
     };
-#   package = pkgs.nixVersions.unstable;
     registry.nixpkgs.flake = inputs.nixpkgs;
   };
   
-  nixpkgs = {
-    config = {
-      allowUnFree = true;
-      permittedInsecurePackages = [
-        "python-2.7.18.6-env"
-      ];
-    };
-  };
-
   system.stateVersion = "23.11";
 }

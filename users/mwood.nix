@@ -33,7 +33,6 @@ in
       obsidian
       pandoc
       tetex
-      rpi-imager
       
       # Terminal
       kitty

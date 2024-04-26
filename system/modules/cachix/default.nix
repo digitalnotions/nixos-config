@@ -9,4 +9,8 @@ let
 in {
   inherit imports;
   nix.settings.substituters = ["https://cache.nixos.org/"];
+
+  environment.systemPackages = with pkgs; [
+    cachix
+  ];
 }

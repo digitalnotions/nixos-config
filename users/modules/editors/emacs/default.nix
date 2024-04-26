@@ -7,12 +7,14 @@
 {
   services.emacs = {
     enable = true;
-    package = pkgs.emacs-git;
+    #    package = pkgs.emacs-git;
+    package = pkgs.emacs;
   };
   
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs-git;
+    #    package = pkgs.emacs-git;
+    package = pkgs.emacs;
   };
 
   home = {

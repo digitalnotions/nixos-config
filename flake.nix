@@ -43,14 +43,14 @@
 
   outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager, emacs, ... }:
     let
-      user = "mwood";
-      location = "$HOME/nixconfig";
+      #user = "mwood";
+      #location = "$HOME/nixconfig";
     in
       {
         nixosConfigurations = (
           import ./hosts {
             inherit (nixpkgs) lib;
-            inherit inputs nixpkgs nixpkgs-unstable home-manager emacs user location;
+            inherit inputs nixpkgs nixpkgs-unstable home-manager emacs;
           }
         );
       };
