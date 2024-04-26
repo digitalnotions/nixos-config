@@ -6,7 +6,10 @@
 
 {
   imports =
-    [./modules/cachix];# ++
+    [
+      ./modules/cachix
+      ./modules/desktop/video
+    ];# ++
 #    (import ../modules/desktop/virtualization);
 
   # Enable ZSH system wide
@@ -50,12 +53,11 @@
   environment = {
     localBinInPath = true;
     variables = {
-      EDITOR = "emacsclient -t";
-      VISUAL = "emacsclient -c";
+      EDITOR = lib.mkDefault "nano";
+      VISUAL = lib.mkDefault "nano";
     };
     systemPackages = with pkgs; [
       killall
-  #    cachix
       nano
       neofetch
       nvd
@@ -63,7 +65,6 @@
       usbutils
       powertop
       htop
-      gcc
       dig
       lsscsi
     ];

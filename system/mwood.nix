@@ -8,6 +8,11 @@ let
   user = "mwood";
 in
 {
+  environment.variables = {
+    EDITOR = "emacsclient -t";
+    VISUAL = "emacsclient -c";
+  };
+  
   users.users.${user} = {
     isNormalUser = true;
     description = "Mark Wood";
