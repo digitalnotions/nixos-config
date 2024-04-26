@@ -3,7 +3,7 @@
 # NixOS.
 #
 
-{ lib, inputs, nixpkgs, nixpkgs-unstable, home-manager, user, location, emacs, ... }:
+{ lib, inputs, nixpkgs, nixpkgs-unstable, home-manager, emacs, ... }:
 
 let
   system = "x86_64-linux";         # Specify architecture
@@ -12,18 +12,18 @@ let
   pkgs = import nixpkgs {
     inherit system;
     config.allowUnfree = true;     # Allow proprietary software
-    overlays = [
-      (import emacs)
-    ];
+#    overlays = [
+#      (import emacs)
+#    ];
   };
 
   # Configure unstable NixOS version
   unstable = import nixpkgs-unstable {
     inherit system;
     config.allowUnfree = true;     # Allow proprietary software
-    overlays = [
-      (import emacs)
-    ];
+#    overlays = [
+#      (import emacs)
+#    ];
   };
 
   lib = nixpkgs.lib;
@@ -36,7 +36,7 @@ in
   tinky = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs pkgs system user location;
+      inherit inputs pkgs system;
       host = {
         hostName = "tinky";
       };
@@ -70,7 +70,7 @@ in
     inherit system;
     # Configure NixOS
     specialArgs = {
-      inherit inputs pkgs system user location;
+      inherit inputs pkgs system;
       host = {
         hostName = "nano";
       };
@@ -105,7 +105,7 @@ in
     inherit system;
     # Configure NixOS
     specialArgs = {
-      inherit inputs pkgs system location;
+      inherit inputs pkgs system;
       host = {
         hostName = "nano3";
       };

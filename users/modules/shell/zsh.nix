@@ -12,7 +12,7 @@
         ll = "ls -al";
 
         # Emacs
-        ec = "${pkgs.emacs-git}/bin/emacsclient -n -c";
+        ec = "${pkgs.emacs}/bin/emacsclient -n -c";
         emacs_restart = "systemctl restart --user emacs && systemctl status --user emacs";
 
         # NixOS
