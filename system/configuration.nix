@@ -8,7 +8,6 @@
   imports =
     [
       ./modules/cachix
-      ./modules/desktop/video
     ];# ++
 #    (import ../modules/desktop/virtualization);
 

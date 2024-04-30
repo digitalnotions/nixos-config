@@ -9,13 +9,16 @@
     [(import ./hardware-configuration.nix)] ++
 #    [(import ../../modules/hardware/fingerprint.nix)] ++
     [(import ../../modules/desktop/kde/default.nix)] ++
-    [(import ../../modules/desktop/video/default.nix)];
+    [(import ../../system/modules/desktop/video/default.nix)];
 
   # Webcam software for MIPI webcam
   hardware.ipu6 = {
     enable = true;
     platform = "ipu6ep";
   };
+  hardware.firmware = [
+    pkgs.ivsc-firmware
+  ];
 
   networking = {
     hostName = "nano3";
@@ -40,5 +43,9 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+    # Use the latest linux kernel
+
+    #kernelPackages = pkgs.linuxPackages_6_6;
+    #kernelPackages = pkgs.linuxPackages_latest;
   };
 }
