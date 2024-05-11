@@ -12,6 +12,7 @@ let
   pkgs = import nixpkgs {
     inherit system;
     config.allowUnfree = true;     # Allow proprietary software
+    config.permittedInsecurePackages = [ "openssl-1.1.1w" ];
 #    overlays = [
 #      (import emacs)
 #    ];
@@ -79,6 +80,7 @@ in
       ./nano
       ../system/configuration.nix
       ../system/mwood.nix
+      ../system/jmwood.nix
 
       # Configure home manager
       home-manager.nixosModules.home-manager {
@@ -93,6 +95,11 @@ in
         home-manager.users.mwood = {
           imports = [
             ../users/mwood.nix
+          ];
+        };
+        home-manager.users.jmwood = {
+          imports = [
+            ../users/jmwood.nix
           ];
         };
       }

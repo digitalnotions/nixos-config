@@ -5,20 +5,18 @@
 { config, lib, pkgs, unstable, ... }:
 
 let
-  user = "mwood";
+  user = "jmwood";
 in
 {
   # Home manager modules
   imports =
-    (import ./modules/editors) ++
-    (import ./modules/shell) ++
-    [(import ./modules/security/default.nix)];
+    (import ./modules/shell);
 
   home = {
     username = "${user}";
     homeDirectory = "/home/${user}";
 
-    packages = with unstable; [
+    packages = with pkgs; [
       # File management
       rsync
       unzip
@@ -26,20 +24,16 @@ in
       unrar
       zip
       p7zip
-      discord
 
       # Applications
       ispell
-      obsidian
-      pandoc
-      tetex
       
       # Terminal
       # kitty
       #alacritty
-      thefuck
-
+      
       # Programming
+      sublime4
       (python3.withPackages(ps: with ps;
         [
           requests
@@ -47,8 +41,6 @@ in
           flake8
         ]))
 
-      # Open GL
-      glxinfo
     ];
 
     stateVersion = "23.11";
@@ -60,10 +52,6 @@ in
       enable = true;
       mutableKeys = true;
       mutableTrust = true;
-    };
-    nix-index = {
-      enable = true;
-      enableZshIntegration = true;
     };
     firefox = {
       enable = true;

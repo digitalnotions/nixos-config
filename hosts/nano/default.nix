@@ -17,6 +17,8 @@
     networkmanager.enable = true;
   };
 
+
+  
   boot = {
     initrd = {
       # Setup keyfile

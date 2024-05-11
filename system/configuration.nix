@@ -101,7 +101,7 @@
       };
     };
   };
-
+  
   nix = {
     gc = {
       automatic = true;
