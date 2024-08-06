@@ -66,6 +66,7 @@
       htop
       dig
       lsscsi
+      chromium
     ];
   };
 

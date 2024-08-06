@@ -31,14 +31,18 @@ in
       # Terminal
       # kitty
       #alacritty
+      thefuck
       
       # Programming
       sublime4
+      sqlite
+      vscode
       (python3.withPackages(ps: with ps;
         [
           requests
           beautifulsoup4
           flake8
+          termcolor
         ]))
 
     ];

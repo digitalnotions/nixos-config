@@ -10,8 +10,8 @@ in
 {  
   users.users.${user} = {
     isNormalUser = true;
-    description = "Jackson Wood";
-    hashedPassword = "$6$hO5IwPWnj0Jn8gTq$NMur8wX4i/IpXZ086AojJpn6ThfIaTCcb0KaqEkThhsC3fyh90HnNasoeC5KDQNZuDZYzZjHjSUJMJRTltTV11";
+    description = "Jackson Wigglebutt";
+    hashedPassword = "$6$A2U1zNgojcB/PXaZ$jgcP6J2s6dFwX8coFw2dKk3DOaKFKurdamzt4dVXjfOwIlZ0W.PKJXFbr0hnhblx.zG8wcFdtxNLzFejnROw/1";
     home = "/home/${user}";
     extraGroups = [ "networkmanager" ];
     shell = pkgs.zsh;
