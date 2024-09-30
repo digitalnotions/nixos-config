@@ -8,6 +8,7 @@
   imports =
     [
       ./modules/cachix
+      ./modules/blockhosts
     ];# ++
 #    (import ../modules/desktop/virtualization);
 
