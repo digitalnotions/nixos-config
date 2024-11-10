@@ -8,7 +8,7 @@
   imports =
     [
       ./modules/cachix
-      ./modules/blockhosts.nix
+      #./modules/blockhosts.nix
     ];# ++
  #   (import ../modules/blockhosts.nix);
 

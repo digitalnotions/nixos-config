@@ -38,18 +38,17 @@
 
 
   # Block some sites in hosts.conf
-  networking.extraHosts =
-    ''
-      127.0.0.1 www.youtube.com
-      127.0.0.1 youtube.com
-      127.0.0.1 www.google.com/search
-      127.0.0.1 google.com/search
-      127.0.0.1 www.lego.com
-      127.0.0.1 www.dailymotion.com
-      127.0.0.1 www.vimeo.com
-      127.0.0.1 www.wikipedia.com
-
-    '';
+#  networking.extraHosts =
+#    ''
+#      127.0.0.1 www.youtube.com
+#      127.0.0.1 youtube.com
+#      127.0.0.1 www.google.com/search
+#      127.0.0.1 google.com/search
+#      127.0.0.1 www.lego.com
+#      127.0.0.1 www.dailymotion.com
+#      127.0.0.1 www.vimeo.com
+#      127.0.0.1 www.wikipedia.com
+#    '';
       
   
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
