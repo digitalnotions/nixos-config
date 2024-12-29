@@ -16,8 +16,16 @@
     hostName = "nano";
     networkmanager.enable = true;
   };
-
-
+  
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      libvdpau-va-gl
+    ];
+  };
+  environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD";};
   
   boot = {
     initrd = {

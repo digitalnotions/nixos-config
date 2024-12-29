@@ -8,9 +8,7 @@
   imports =
     [
       ./modules/cachix
-      #./modules/blockhosts.nix
     ];# ++
- #   (import ../modules/blockhosts.nix);
 
   # Enable ZSH system wide
   programs = {
@@ -68,6 +66,7 @@
       dig
       lsscsi
       chromium
+      ffmpeg
     ];
   };
 
