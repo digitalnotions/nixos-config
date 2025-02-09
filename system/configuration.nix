@@ -67,6 +67,8 @@
       lsscsi
       chromium
       ffmpeg
+      gst_all_1.gstreamer
+      gst_all_1.gst-vaapi
     ];
   };
 
