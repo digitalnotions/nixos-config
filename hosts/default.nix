@@ -81,6 +81,7 @@ in
       ../system/configuration.nix
       ../system/mwood.nix
       ../system/jmwood.nix
+      ../system/minecraft.nix
 
       # Configure home manager
       home-manager.nixosModules.home-manager {
@@ -100,6 +101,11 @@ in
         home-manager.users.jmwood = {
           imports = [
             ../users/jmwood.nix
+          ];
+        };
+        home-manager.users.minecraft = {
+          imports = [
+            ../users/minecraft.nix
           ];
         };
       }
