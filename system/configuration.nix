@@ -6,9 +6,8 @@
 
 {
   imports =
-    [
-      ./modules/cachix
-    ];# ++
+    [./modules/cachix] ++
+    [(import ./modules/blockhosts.nix)];
 
   # Enable ZSH system wide
   programs = {
